@@ -1,0 +1,28 @@
+@media only screen and (max-width: 600px) {
+    .explanationMainDiv {
+      width: 80%;
+      height: 40%;
+      margin-top:10%;
+      bottom: 10%;
+      left: 10%;
+      right:10%;
+      position: absolute;
+    }
+  }
+
+
+
+
+  @media only screen and (min-width: 600px) {
+    .explanationMainDiv {
+      font-size: 200%;
+      width: 50%;
+      height: 20%;
+      bottom: 10%;
+      top:20%;
+      left: 25%;
+      right:25%;
+      position: absolute;
+      
+    }
+  }

@@ -1,0 +1,70 @@
+
+@media only screen and (min-width: 600px) {
+    #mainDivQuestionnaire
+    {
+        width: 50%;
+        right: 25%;
+        font-size: 130%;
+        text-align: right;
+        margin-right: 2%;
+        top: 5%;
+        position: absolute;
+    }
+    #discriptionsQuestionnaire
+    {
+        margin-top: 10%;
+        font-size: 120%;
+        margin-bottom: 5%;
+    }
+    .questionnaireQuest
+    {
+        font-size: 110%;
+        padding: 2%;
+        border-radius: 4px;
+        width: 50%;
+        margin-right: 25%;
+        font-family: 'Arimo', sans-serif;
+        border-color: lightgray;
+        text-align: center;
+    }
+    .questionnaireQuest option {
+        font-size: 110%;
+        font-family: 'Arimo', sans-serif;
+        text-align: center;
+    }
+    #mainDivQuestionnaire table tr{
+        margin-top: 13%
+    }
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    #mainDivQuestionnaire
+    {
+        text-align: right;
+        margin-right: 2%;
+        margin: 6%;
+    }
+    #discriptionsQuestionnaire
+    {
+        margin-top: 20%;
+        
+    }
+    #mainDivQuestionnaire table tr{
+        margin-top: 3%
+    }
+    .questionnaireQuest
+    {
+        padding: 2%;
+        border-radius: 4px;
+        width: 50%;
+        font-family: 'Arimo', sans-serif;
+        border-color: lightgray;
+        text-align: center;
+    }
+    .questionnaireQuest option {
+        font-size: 110%;
+        font-family: 'Arimo', sans-serif;
+        text-align: center;
+    }
+  } 
