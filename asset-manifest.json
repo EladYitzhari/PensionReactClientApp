@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/PensionReactClientApp/static/css/main.1ad85287.chunk.css",
-    "main.js": "/PensionReactClientApp/static/js/main.c82f5648.chunk.js",
-    "main.js.map": "/PensionReactClientApp/static/js/main.c82f5648.chunk.js.map",
+    "main.css": "/PensionReactClientApp/static/css/main.1a69b4d0.chunk.css",
+    "main.js": "/PensionReactClientApp/static/js/main.1b2fd15a.chunk.js",
+    "main.js.map": "/PensionReactClientApp/static/js/main.1b2fd15a.chunk.js.map",
     "runtime-main.js": "/PensionReactClientApp/static/js/runtime-main.73cdfd80.js",
     "runtime-main.js.map": "/PensionReactClientApp/static/js/runtime-main.73cdfd80.js.map",
     "static/js/2.9376a560.chunk.js": "/PensionReactClientApp/static/js/2.9376a560.chunk.js",
     "static/js/2.9376a560.chunk.js.map": "/PensionReactClientApp/static/js/2.9376a560.chunk.js.map",
     "index.html": "/PensionReactClientApp/index.html",
-    "precache-manifest.16e08c814f1a769eb2fdbaf5043a9280.js": "/PensionReactClientApp/precache-manifest.16e08c814f1a769eb2fdbaf5043a9280.js",
+    "precache-manifest.b60149d05bdee772fe345b685c1ccaa5.js": "/PensionReactClientApp/precache-manifest.b60149d05bdee772fe345b685c1ccaa5.js",
     "service-worker.js": "/PensionReactClientApp/service-worker.js",
-    "static/css/main.1ad85287.chunk.css.map": "/PensionReactClientApp/static/css/main.1ad85287.chunk.css.map",
+    "static/css/main.1a69b4d0.chunk.css.map": "/PensionReactClientApp/static/css/main.1a69b4d0.chunk.css.map",
     "static/js/2.9376a560.chunk.js.LICENSE": "/PensionReactClientApp/static/js/2.9376a560.chunk.js.LICENSE",
     "static/media/LOGOONO.jpg": "/PensionReactClientApp/static/media/LOGOONO.34641b59.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.73cdfd80.js",
     "static/js/2.9376a560.chunk.js",
-    "static/css/main.1ad85287.chunk.css",
-    "static/js/main.c82f5648.chunk.js"
+    "static/css/main.1a69b4d0.chunk.css",
+    "static/js/main.1b2fd15a.chunk.js"
   ]
 }
