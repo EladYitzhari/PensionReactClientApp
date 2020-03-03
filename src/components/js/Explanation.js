@@ -8,6 +8,12 @@ class Explanation extends Component {
 
     state = {  }
 
+    componentDidMount=()=>{
+           console.log("is mobile",(typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1));
+           let isMobile = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
+           alert("is mobile: "+isMobile);
+    }
+
     nextLevel=()=>{
         this.props.finishExplain(this.props.userId,new Date().toString());
         console.log("userId",this.props.userId,"date",new Date().toString())
