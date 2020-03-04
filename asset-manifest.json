@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/PensionReactClientApp/static/css/main.1a69b4d0.chunk.css",
-    "main.js": "/PensionReactClientApp/static/js/main.1b2fd15a.chunk.js",
-    "main.js.map": "/PensionReactClientApp/static/js/main.1b2fd15a.chunk.js.map",
+    "main.css": "/PensionReactClientApp/static/css/main.a1779966.chunk.css",
+    "main.js": "/PensionReactClientApp/static/js/main.27456377.chunk.js",
+    "main.js.map": "/PensionReactClientApp/static/js/main.27456377.chunk.js.map",
     "runtime-main.js": "/PensionReactClientApp/static/js/runtime-main.73cdfd80.js",
     "runtime-main.js.map": "/PensionReactClientApp/static/js/runtime-main.73cdfd80.js.map",
-    "static/js/2.9376a560.chunk.js": "/PensionReactClientApp/static/js/2.9376a560.chunk.js",
-    "static/js/2.9376a560.chunk.js.map": "/PensionReactClientApp/static/js/2.9376a560.chunk.js.map",
+    "static/js/2.47d6b13d.chunk.js": "/PensionReactClientApp/static/js/2.47d6b13d.chunk.js",
+    "static/js/2.47d6b13d.chunk.js.map": "/PensionReactClientApp/static/js/2.47d6b13d.chunk.js.map",
     "index.html": "/PensionReactClientApp/index.html",
-    "precache-manifest.b60149d05bdee772fe345b685c1ccaa5.js": "/PensionReactClientApp/precache-manifest.b60149d05bdee772fe345b685c1ccaa5.js",
+    "precache-manifest.4379116714ef7382a01c8efea3337192.js": "/PensionReactClientApp/precache-manifest.4379116714ef7382a01c8efea3337192.js",
     "service-worker.js": "/PensionReactClientApp/service-worker.js",
-    "static/css/main.1a69b4d0.chunk.css.map": "/PensionReactClientApp/static/css/main.1a69b4d0.chunk.css.map",
-    "static/js/2.9376a560.chunk.js.LICENSE": "/PensionReactClientApp/static/js/2.9376a560.chunk.js.LICENSE",
+    "static/css/main.a1779966.chunk.css.map": "/PensionReactClientApp/static/css/main.a1779966.chunk.css.map",
+    "static/js/2.47d6b13d.chunk.js.LICENSE": "/PensionReactClientApp/static/js/2.47d6b13d.chunk.js.LICENSE",
     "static/media/LOGOONO.jpg": "/PensionReactClientApp/static/media/LOGOONO.34641b59.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.73cdfd80.js",
-    "static/js/2.9376a560.chunk.js",
-    "static/css/main.1a69b4d0.chunk.css",
-    "static/js/main.1b2fd15a.chunk.js"
+    "static/js/2.47d6b13d.chunk.js",
+    "static/css/main.a1779966.chunk.css",
+    "static/js/main.27456377.chunk.js"
   ]
 }
