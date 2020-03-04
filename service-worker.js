@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PensionReactClientApp/precache-manifest.4379116714ef7382a01c8efea3337192.js"
+  "/PensionReactClientApp/precache-manifest.486a0e6ac64d6926f19d8d125e814b00.js"
 );
 
 self.addEventListener('message', (event) => {
