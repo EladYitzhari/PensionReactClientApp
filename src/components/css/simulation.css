@@ -1,0 +1,59 @@
+
+
+@media only screen and (max-width: 600px) {
+
+    
+    #simulationHeader
+    {
+        margin-top: 5%;
+        width: 100%;
+        text-align: center;
+        font-size: 100%;
+        margin-bottom: 8%;
+        
+    }
+    #simulationButtonsSection
+    {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5%;
+    
+        
+
+    }
+
+    #simulationChartDiv
+    {
+        width: 100%;
+        text-align: center;
+        
+        
+    }
+  }
+
+
+
+
+  @media only screen and (min-width: 600px) {
+
+    
+    #simulationHeader
+    {
+        margin-top: 5%;
+        width: 100%;
+        text-align: center;
+        font-size: 200%;
+        margin-bottom: 3%;
+    }
+    #simulationButtonsSection
+    {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    #simulationChartDiv
+    {
+        margin-right: 30%;
+       
+    }
+  }

@@ -22,8 +22,12 @@ class Questionnaire extends Component {
         insurenceEmployers:"0",
         areYouManager:"no",
         numOfEmployees:"0"
+        
      }
 
+     componentWillMount=()=>{
+        this.props.getUserIp();
+     }
     test = (state)=>
     {
         console.log(state)
@@ -36,8 +40,10 @@ class Questionnaire extends Component {
     {
         let versionNumer = Math.round(Math.random()*3)+1;
         let userDetails = {...state,
+                    mobileDevice:(typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1),
                     createTime:new Date().toString(),
-                    simulationType:versionNumer};
+                    simulationType:versionNumer,
+                    ip:this.props.ip};
         this.props.updateVersion(versionNumer);
         this.props.insertUserDetails(userDetails);
         this.props.changeStage("explanation");
@@ -278,13 +284,20 @@ class Questionnaire extends Component {
  
 
  
+const mapStateToProp = state =>
+{
+    return {
+         ip:state.main.ip
+        }
+}
 
 const mapDispatchToProps = dispatch =>
 {
     return {
         insertUserDetails: (userDetails) => dispatch(mainAction.insertNewUserDetails(userDetails)),
         changeStage: (newStage) => dispatch(mainAction.changeStageDispach(newStage)),
-        updateVersion: (versionNum) => dispatch(mainAction.UpdateVersion(versionNum))
+        updateVersion: (versionNum) => dispatch(mainAction.UpdateVersion(versionNum)),
+        getUserIp: ()=> dispatch(mainAction.getUserIp())
     }
 }
-export default connect(null,mapDispatchToProps)(Questionnaire);
+export default connect(mapStateToProp,mapDispatchToProps)(Questionnaire);

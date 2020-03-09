@@ -1,7 +1,9 @@
 import * as actionTypes from '../acions/actionTypes'
 import * as location from '../../components/Functions/locations'
 import * as httpFunctions from '../../components/Functions/HttpFunctions'
-import 'whatwg-fetch'
+import 'whatwg-fetch';
+import axiox from 'axios';
+import axios from 'axios';
 /////////////////////////INSERT NEW USER////////////////////////////
 export const insertNewUser = (userId) =>
 {
@@ -16,27 +18,15 @@ export const insertNewUserDetails = (userDetails) =>
 {
     return (dispatch)  =>
     {
-        fetch(location.serverAdress()+"/User/NewUser", {
-            method: 'POST',
-            body: JSON.stringify(userDetails)
-            ,headers: {
-                'Content-Type':'application/json'
-            //   'Authorization': localStorage.getItem("token")
-            }
-          })
-        .then(httpFunctions.checkStatus)
-        .then(response=>{
-            return response.text();
-        })
-        // .then(httpFunctions.parseJSON)
-        .then(function(data) {
-          console.log('request succeeded: '+location.serverAdress()+"/User/NewUser", data)
-          dispatch(insertNewUser(data));
-        }).catch(function(error) {
-          console.log('request failed', error.data)
-          alert("Somthing went wrong, send that message to the admin: "+error.data);
-
-        })
+      axios.post("https://pension-app-a235f.firebaseio.com/users.json",userDetails)
+      .then(response =>{
+        dispatch(insertNewUser(response.data.name));
+      }).catch(error=>{
+        console.log(error);
+        alert("there was an error, please contact the admin, the error is: "+error)
+      })
+          
+        
  
     }
 }
@@ -51,21 +41,30 @@ export const finishExplanation = () =>
 export const finishExplanationUpdate = (userId,finishTime)=>{
   return (dispatch)  =>
     {
-      fetch(location.serverAdress()+"/User/finishExplain", {
-        method: 'POST',
-        body:JSON.stringify({userId:userId,finishExplanation:finishTime
-        })
-        ,headers: {
-            'Content-Type':'application/json'
-        }
+      axiox.patch("https://pension-app-a235f.firebaseio.com/users/"+userId+".json",{finishExplanationTime:finishTime})
+      .then(response=>{
+        dispatch(finishExplanation());
+        console.log("request succeeded");
       })
-      .then(httpFunctions.checkStatus)
-        .then(function(data) {
-          dispatch(finishExplanation());
-          console.log('request succeeded: '+location.serverAdress()+"/User/finishExplain/"+finishTime, data)     
-        }).catch(function(error) {
-          console.log('request failed', error.data)
-        })
+    }
+}
+
+////////////////INSERT NEW CYCLE TO DB///////////////////////////
+export const insertNewCycleToDbDispach = () =>
+{
+    return {
+            type: actionTypes.INSERT_NEW_CYCLE_TO_DB,
+            };
+      
+}
+export const insertNewCycleToDb = (userId,cycle)=>{
+  return (dispatch)  =>
+    {
+      axiox.post("https://pension-app-a235f.firebaseio.com/users/"+userId+"/cycles.json",cycle)
+      .then(response=>{
+        dispatch(insertNewCycleToDbDispach());
+        console.log("request succeeded, cycle inserted to DB: "+cycle);
+      })
     }
 }
 
@@ -94,3 +93,25 @@ export const UpdateVersion = (versionNumber) =>
     val:versionNumber
     };
 }
+////////////////GET USER IP///////////////////////////
+export const insertUserIp = (userIp) =>
+{
+    return {
+            type: actionTypes.GET_USER_IP,
+            val:userIp
+            };
+      
+}
+export const getUserIp = ()=>{
+  return (dispatch)  =>
+    {
+      axiox.get("https://api.ipify.org/?format=json")
+      .then(response=>{
+        console.log(response.data)
+        dispatch(insertUserIp(response.data.ip));
+        console.log("request succeeded, the ip is: "+response.data.ip);
+      })
+    }
+}
+
+///////////////CHANGE STAGE///////////////////////////
